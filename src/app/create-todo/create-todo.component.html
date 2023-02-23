@@ -1,0 +1,15 @@
+<form [formGroup]="post" (submit)="onAddTodo()">
+    <div>
+        <mat-form-field appearance="fill">
+            <label>Title</label>
+            <input matInput formControlName="title">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <label>Description</label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+    </div>
+    <button type="submit">Add to list</button>
+</form>

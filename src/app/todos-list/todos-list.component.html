@@ -1,0 +1,9 @@
+<mat-selection-list>
+    <mat-list-option *ngFor="let todo of todos">
+        <a routerLink="/{{todo._id}}">{{todo.title}}</a>
+
+        <button><a routerLink="/updateTodo/{{todo._id}}">Edit</a></button>
+        <button (click)="onDelete(todo._id)">Delete</button>
+        <!-- <input matInput type="hidden" value="{{todo._id}}" [(ngModel)]="todoID"> -->
+    </mat-list-option>
+</mat-selection-list>

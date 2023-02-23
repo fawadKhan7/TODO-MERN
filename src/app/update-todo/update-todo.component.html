@@ -1,0 +1,15 @@
+<form [formGroup]="post" (submit)="onUpdateTodo()">
+    <div>
+        <mat-form-field appearance="fill">
+            <label>Title</label>
+            <input matInput formControlName="title" [value]="todo?.title">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <label>Description</label>
+            <textarea matInput formControlName="description" [value]="todo?.description"></textarea>
+        </mat-form-field>
+    </div>
+    <button type="submit">Update todo</button>
+</form>
